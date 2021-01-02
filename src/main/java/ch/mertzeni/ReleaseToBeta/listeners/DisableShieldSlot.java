@@ -1,17 +1,11 @@
 package ch.mertzeni.ReleaseToBeta.listeners;
 
 
-import org.bukkit.Bukkit;
-import org.bukkit.Material;
-import org.bukkit.entity.Item;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
-import org.bukkit.event.inventory.InventoryEvent;
-import org.bukkit.event.inventory.InventoryInteractEvent;
 import org.bukkit.event.player.PlayerSwapHandItemsEvent;
-import org.bukkit.inventory.ItemStack;
 
 public class DisableShieldSlot implements Listener {
 
