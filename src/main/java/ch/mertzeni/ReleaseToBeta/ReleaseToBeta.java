@@ -16,10 +16,12 @@ import org.bukkit.plugin.java.annotation.plugin.author.Author;
 public class ReleaseToBeta extends JavaPlugin {
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(new DisableShieldSlot(), this);
+        getServer().getPluginManager().registerEvents(new DisableShieldSlot(this), this);
         getServer().getPluginManager().registerEvents(new DisableHunger(), this);
         getServer().getPluginManager().registerEvents(new DisablePotions(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
+        // BukkitTask shieldSlotFix = new ShieldSlotFix(this).runTaskLater(this, 300L);
+
         getLogger().info("Release to Beta has been enabled.");
     }
 
