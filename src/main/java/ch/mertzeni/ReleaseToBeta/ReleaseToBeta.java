@@ -1,9 +1,9 @@
-package ch.mertzeni.adam.ReleaseToBeta;
+package ch.mertzeni.ReleaseToBeta;
 
-import ch.mertzeni.adam.ReleaseToBeta.listeners.DisableHunger;
-import ch.mertzeni.adam.ReleaseToBeta.listeners.DisablePotions;
-import ch.mertzeni.adam.ReleaseToBeta.listeners.DisableShieldSlot;
-import ch.mertzeni.adam.ReleaseToBeta.listeners.PlayerJoin;
+import ch.mertzeni.ReleaseToBeta.listeners.DisableHunger;
+import ch.mertzeni.ReleaseToBeta.listeners.DisablePotions;
+import ch.mertzeni.ReleaseToBeta.listeners.DisableShieldSlot;
+import ch.mertzeni.ReleaseToBeta.listeners.PlayerJoin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.java.annotation.plugin.Description;
 import org.bukkit.plugin.java.annotation.plugin.Plugin;
