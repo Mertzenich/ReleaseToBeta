@@ -28,7 +28,8 @@ public class ShieldSlotFix extends BukkitRunnable {
 
         if (shieldSlot != null) {
             //player.getInventory().addItem(shieldSlot);
-            inv.setItem(inv.firstEmpty(), shieldSlot);
+            inv.addItem(shieldSlot);
+            player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 1, 1);
             shieldSlot.setAmount(0);
         }
     }
