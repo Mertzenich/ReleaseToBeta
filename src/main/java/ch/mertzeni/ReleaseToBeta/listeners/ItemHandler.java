@@ -46,9 +46,14 @@ public class ItemHandler implements Listener {
                 int itemAmount = itemStack.getAmount();
                 itemStack.setAmount(1);
 
+                player.sendMessage(player.getInventory().getContents().toString());
+
                 item.remove();
                 for (int i = 0; i < itemAmount; i++) {
-                    inv.setItem(player.getInventory().firstEmpty(), itemStack);
+                    player.sendMessage("" + player.getInventory().firstEmpty() + "\n\n" + player.getInventory().getItem(player.getInventory().firstEmpty()).getType());
+                    if(player.getInventory().getItem(player.getInventory().firstEmpty()).getType() != null && player.getInventory().firstEmpty() > 0){
+                        inv.setItem(player.getInventory().firstEmpty(), itemStack);
+                    }
                 }
 
                 e.setCancelled(true);

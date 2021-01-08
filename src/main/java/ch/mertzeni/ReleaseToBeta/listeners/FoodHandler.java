@@ -42,34 +42,37 @@ public class FoodHandler implements Listener {
         double playerHealth = player.getHealth();
         // Standard Food
         if (e.getItem() != null && e.getItem().getType() != null) {
-            if (e.getItem().getType() == Material.COOKED_PORKCHOP) {
-                player.setHealth(healAmount(playerHealth, 8));
-                itemStack.setAmount(itemStack.getAmount() - 1);
-            } else if (e.getItem().getType() == Material.MUSHROOM_STEW) {
-                player.setHealth(healAmount(playerHealth, 10));
-                itemStack.setAmount(itemStack.getAmount() - 1);
-            } else if (e.getItem().getType() == Material.GOLDEN_APPLE) {
-                player.setHealth(healAmount(playerHealth, 20));
-                itemStack.setAmount(itemStack.getAmount() - 1);
-            } else if (e.getItem().getType() == Material.APPLE) {
-                player.setHealth(healAmount(playerHealth, 4));
-                itemStack.setAmount(itemStack.getAmount() - 1);
-            } else if (e.getItem().getType() == Material.BREAD) {
-                player.setHealth(healAmount(playerHealth, 5));
-                itemStack.setAmount(itemStack.getAmount() - 1);
-            } else if (e.getItem().getType() == Material.PORKCHOP) {
-                player.setHealth(healAmount(playerHealth, 3));
-                itemStack.setAmount(itemStack.getAmount() - 1);
-            } else if (e.getItem().getType() == Material.SALMON) {
-                player.setHealth(healAmount(playerHealth, 2));
-                itemStack.setAmount(itemStack.getAmount() - 1);
-            } else if (e.getItem().getType() == Material.COOKED_SALMON) {
-                player.setHealth(healAmount(playerHealth, 5));
-                itemStack.setAmount(itemStack.getAmount() - 1);
-            } else if (e.getItem().getType() == Material.COOKIE) {
-                player.setHealth(healAmount(playerHealth, 1));
-                itemStack.setAmount(itemStack.getAmount() - 1);
+            if (e.getAction() == Action.RIGHT_CLICK_BLOCK || e.getAction() == Action.RIGHT_CLICK_AIR) {
+                if (e.getItem().getType() == Material.COOKED_PORKCHOP) {
+                    player.setHealth(healAmount(playerHealth, 8));
+                    itemStack.setAmount(itemStack.getAmount() - 1);
+                } else if (e.getItem().getType() == Material.MUSHROOM_STEW) {
+                    player.setHealth(healAmount(playerHealth, 10));
+                    itemStack.setAmount(itemStack.getAmount() - 1);
+                } else if (e.getItem().getType() == Material.GOLDEN_APPLE) {
+                    player.setHealth(healAmount(playerHealth, 20));
+                    itemStack.setAmount(itemStack.getAmount() - 1);
+                } else if (e.getItem().getType() == Material.APPLE) {
+                    player.setHealth(healAmount(playerHealth, 4));
+                    itemStack.setAmount(itemStack.getAmount() - 1);
+                } else if (e.getItem().getType() == Material.BREAD) {
+                    player.setHealth(healAmount(playerHealth, 5));
+                    itemStack.setAmount(itemStack.getAmount() - 1);
+                } else if (e.getItem().getType() == Material.PORKCHOP) {
+                    player.setHealth(healAmount(playerHealth, 3));
+                    itemStack.setAmount(itemStack.getAmount() - 1);
+                } else if (e.getItem().getType() == Material.SALMON) {
+                    player.setHealth(healAmount(playerHealth, 2));
+                    itemStack.setAmount(itemStack.getAmount() - 1);
+                } else if (e.getItem().getType() == Material.COOKED_SALMON) {
+                    player.setHealth(healAmount(playerHealth, 5));
+                    itemStack.setAmount(itemStack.getAmount() - 1);
+                } else if (e.getItem().getType() == Material.COOKIE) {
+                    player.setHealth(healAmount(playerHealth, 1));
+                    itemStack.setAmount(itemStack.getAmount() - 1);
+                }
             }
+
         }
 
         // Cake Eating
