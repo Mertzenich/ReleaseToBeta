@@ -1,5 +1,6 @@
 package ch.mertzeni.ReleaseToBeta;
 
+import ch.mertzeni.ReleaseToBeta.commands.gm;
 import ch.mertzeni.ReleaseToBeta.listeners.*;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.java.annotation.command.Command;
@@ -12,7 +13,7 @@ import org.bukkit.plugin.java.annotation.plugin.author.Author;
 @Plugin(name="ReleaseToBeta" , version="0.1")
 @Description(value = "Taking modern minecraft back to simpler times.")
 @Author(value = "Adam Mertzenich")
-@Commands(@Command(name = "r2b", desc = "ReleaseToBeta Command"))
+@Commands(@Command(name = "gm", desc = "Change gamemode (for testing)"))
 @ApiVersion(ApiVersion.Target.v1_15)
 
 public class ReleaseToBeta extends JavaPlugin {
@@ -30,6 +31,9 @@ public class ReleaseToBeta extends JavaPlugin {
             getServer().getPluginManager().registerEvents(new DisablePotions(), this);
             getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         }
+
+        // Create Commands
+        this.getCommand("gm").setExecutor(new gm());
 
         getLogger().info("Release to Beta has been enabled.");
     }
