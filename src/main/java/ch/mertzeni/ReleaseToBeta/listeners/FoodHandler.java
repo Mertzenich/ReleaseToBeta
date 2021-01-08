@@ -80,8 +80,8 @@ public class FoodHandler implements Listener {
 
             Cake cakeData = (Cake) e.getClickedBlock().getBlockData();
             player.sendMessage("" + cakeData.getBites());
-            if (cakeData.getBites() == 4) {
-                cakeData.setBites(6);
+            if (cakeData.getBites() == 0) {
+                cakeData.setBites(2);
                 e.getClickedBlock().setBlockData(cakeData);
 
                 e.setCancelled(true);
