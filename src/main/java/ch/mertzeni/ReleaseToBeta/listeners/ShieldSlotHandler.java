@@ -14,10 +14,10 @@ import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitTask;
 
-public class DisableShieldSlot implements Listener {
+public class ShieldSlotHandler implements Listener {
 
     public ReleaseToBeta plugin;
-    public DisableShieldSlot(ReleaseToBeta plugin) {
+    public ShieldSlotHandler(ReleaseToBeta plugin) {
         this.plugin = plugin;
     }
 

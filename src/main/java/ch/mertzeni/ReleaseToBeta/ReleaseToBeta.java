@@ -25,11 +25,12 @@ public class ReleaseToBeta extends JavaPlugin {
 
         // Register Events
         if (getConfig().getBoolean("enabled")) {
-            getServer().getPluginManager().registerEvents(new DisableShieldSlot(this), this);
-            getServer().getPluginManager().registerEvents(new DisableHunger(this), this);
+            getServer().getPluginManager().registerEvents(new ShieldSlotHandler(this), this);
+            getServer().getPluginManager().registerEvents(new HungerHandler(this), this);
             getServer().getPluginManager().registerEvents(new FoodHandler(this), this);
-            getServer().getPluginManager().registerEvents(new DisablePotions(), this);
+            getServer().getPluginManager().registerEvents(new PotionHandler(), this);
             getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
+            getServer().getPluginManager().registerEvents(new ItemHandler(this), this);
         }
 
         // Create Commands

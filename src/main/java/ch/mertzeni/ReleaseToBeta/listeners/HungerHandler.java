@@ -10,9 +10,9 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.scheduler.BukkitTask;
 
-public class DisableHunger implements Listener {
+public class HungerHandler implements Listener {
     public ReleaseToBeta plugin;
-    public DisableHunger(ReleaseToBeta plugin) {
+    public HungerHandler(ReleaseToBeta plugin) {
         this.plugin = plugin;
     }
 

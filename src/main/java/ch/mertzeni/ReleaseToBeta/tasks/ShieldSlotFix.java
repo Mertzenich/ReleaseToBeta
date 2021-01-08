@@ -1,10 +1,7 @@
 package ch.mertzeni.ReleaseToBeta.tasks;
 
 import ch.mertzeni.ReleaseToBeta.ReleaseToBeta;
-import ch.mertzeni.ReleaseToBeta.listeners.DisableShieldSlot;
-import org.bukkit.EntityEffect;
 import org.bukkit.Sound;
-import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
